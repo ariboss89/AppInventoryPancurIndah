@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="84f43fa3-d2e4-409f-bf28-a4658a808c19">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT *FROM tb_supplier
+]]>
+	</queryString>
+	<field name="idsupplier" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kontak" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="98" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="98" uuid="db330f61-3796-4774-ab48-098ab35bd960"/>
+			</rectangle>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="281" y="58" width="261" height="20" uuid="afd92b0e-ef32-4ded-bf2d-50807187129e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="31" uuid="a62977e5-ce29-4d9f-a4da-2ad22701da31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN SUPPLIER PANCUR INDAH]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="20" uuid="4dfd85f9-7da7-4de2-afac-a1075a49d77a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="2a6d0787-0518-4b78-87e7-95229cc4b365"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID SUPPLIER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="156" height="20" uuid="528a6209-58f4-41bb-9b1b-6f2a4070b000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="0" width="100" height="20" uuid="f7d40c60-6adb-4cd5-82ee-6e84a3378c3a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KONTAK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="0" width="199" height="20" uuid="b3dec440-2b95-4194-b57c-0aaa017815dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALAMAT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="67" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="67" uuid="2860053e-2cc7-468a-b154-364a68d8339d"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="67" uuid="f91161d7-8545-4b9c-8eae-059d4aae05d0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idsupplier}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="156" height="67" uuid="bddafd74-2645-4759-b165-0906ec0bfcc8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="256" y="0" width="100" height="67" uuid="3f7fa358-3570-4427-93f8-b3e6d9fc3c34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kontak}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="0" width="199" height="67" uuid="b305dd05-86ee-4b72-8192-cc2ab4db75a8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="164" splitType="Stretch">
+			<staticText>
+				<reportElement x="366" y="144" width="189" height="20" uuid="ef0c4868-cfae-4b40-92fe-6f5d800ea64b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMILIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="12" width="89" height="20" uuid="5426ebe2-45fd-47fd-910a-929afc5a540e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MENGETAHUI,]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="455" y="12" width="100" height="20" uuid="558c8fc4-c0e5-4b52-9b3c-6ceeb4d9c378"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
